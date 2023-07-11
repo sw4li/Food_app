@@ -3,23 +3,21 @@ import { StateContext } from '../context/AppProvider'
 
 const Checkout = () => {
 
-  const cartPackage = useContext(StateContext);
+  // const cartPackage = useContext(StateContext);
+  let cartFromLocal =JSON.parse(localStorage.getItem('cartItems'));
 
-  let cartItems = cartPackage.cartItems.map((item) => {
+  let cartItem =cartFromLocal.cartItems.map((item) => {
     return (
-        <>
+        <div className='checkout-item-container'>
             <img src={item.image} alt="product image" />
             <h6>{item.name}</h6>
-        </>
-
+        </div>
     )
 })
-
   return (
     <div className='checkout'>
-      <div className=''>
-        <h2>checkout</h2>
-       {cartItems}
+      <div className='checkout-container'>
+       {cartItem}
       </div>
     </div>
   )
