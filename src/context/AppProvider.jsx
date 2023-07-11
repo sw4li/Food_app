@@ -5,8 +5,10 @@ const DispatchContext = createContext();
 const StateContext = createContext();
 
 const AppProvider = (props) => {
-
-    const initialState = { cartItems: [] }
+// if cart has values
+let cartFromLocal =JSON.parse(localStorage.getItem('cartItems'));
+    // initial state
+    const initialState = { cartItems: [...cartFromLocal.cartItems] }
     const reducer = (state, action) => {
         switch (action.type) {
             case 'add_to_cart':
@@ -32,7 +34,7 @@ const AppProvider = (props) => {
     let [cart, setCart] = useState();
     // retrieving data from localstorage on state updation
     useEffect(() => {
-        const items = JSON.parse(localStorage.getItem('cartItems'));;
+        const items = JSON.parse(localStorage.getItem('cartItems'));
         if (items) {
           setCart(items);
         }
