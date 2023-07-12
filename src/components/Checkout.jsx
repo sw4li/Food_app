@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Payment from "./PaymentModal/Payment"
 
 const Checkout = () => {
 
@@ -14,26 +15,30 @@ const Checkout = () => {
     )
   })
 
+  let [isOpen, setIsOpen] = useState(false);
+
+  const buyItem = () => {
+    setIsOpen(true)
+  }
+
   return (
-    <div className='checkout'>
-      <div className='checkout-container flex'>
-        <div className='checkout-container-items'>
-          {/* <div className="checkout-container-item flex">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuMMQ5SiGdHRhfFPiil9ealFjmJFBNmY_B3FywVUM&s" alt="product image" />
-            <h4>apple</h4>
-            <h4>1</h4>
-          </div> */}
-          {cartItem}
-        </div>
-        <div className='checkout-container-totals'>
-          <h1>Checkout Total</h1>
-          <div className='checkout-container-total'>
-            <h2>MRP:499</h2>
-            <button>Make Payment</button>
+    <>
+      <Payment isOpen={isOpen} setIsOpen={setIsOpen} cartItem={cartItem} />
+      <div className='checkout'>
+        <div className='checkout-container flex'>
+          <div className='checkout-container-items'>
+            {cartItem.length>0?cartItem:<h2>Cart is Empty</h2> }
+          </div>
+          <div className='checkout-container-totals'>
+            <h1>Checkout Total</h1>
+            <div className='checkout-container-total'>
+              {cartItem.length>0?<h3>MRP:699</h3>:<h3>MRP:0.00 Rs</h3>}
+              <button onClick={buyItem}>Make Payment</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
