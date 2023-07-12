@@ -17,7 +17,7 @@ let cartFromLocal =JSON.parse(localStorage.getItem('cartItems'));
                 let filteredState = state.cartItems.filter((item) => {
                     return (item.name !== action.payload.name)
                 })
-                return ({ cartItems: [...filteredState] })
+                return ({cartItems: [...filteredState] })
             default:
                 return state;
         }
