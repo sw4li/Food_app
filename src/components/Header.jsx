@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../assets/logo/output.png"
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
         <div>
             <div className="header-container flex ">
                 <div className="header-logo">
-                    <img src="https://1000logos.net/wp-content/uploads/2021/06/Zomato-logo-768x432.png" alt="" />
+                    <img src={logo} alt="" />
                 </div>
                 <div className="header-nav flex flex-center">
                     <li>
