@@ -32,7 +32,7 @@ const Checkout = () => {
           <div className='checkout-container-totals'>
             <h1>Checkout Total</h1>
             <div className='checkout-container-total'>
-              {cartItem.length>0?<h3>MRP:699</h3>:<h3>MRP:0.00 Rs</h3>}
+              {cartItem.length>0?<h3>MRP:699.00 Rs</h3>:<h3>MRP:0.00 Rs</h3>}
               <button onClick={buyItem}>Make Payment</button>
             </div>
           </div>
