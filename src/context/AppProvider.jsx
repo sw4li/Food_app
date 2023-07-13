@@ -23,13 +23,15 @@ let cartFromLocal =JSON.parse(localStorage.getItem('cartItems'));
         }
     }
 
+    // useReducer
+    let [state, dispatch] = useReducer(reducer, initialState);
+
 // setting cart data to localstorage
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(state));
-    }, [initialState])
+    }, [state])
 
-// useReducer
-    let [state, dispatch] = useReducer(reducer, initialState);
+
 // state store cart data from localStorage
     let [cart, setCart] = useState();
     // retrieving data from localstorage on state updation

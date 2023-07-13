@@ -8,7 +8,7 @@ const Checkout = () => {
   let cartItem = cartFromLocal.cartItems.map((item) => {
     return (
       <div className="checkout-container-item flex">
-        <img src={item.image} alt="product image" />
+        <img src={item.image} alt="product" />
         <h4>{item.name}</h4>
         <h4>1</h4>
       </div>

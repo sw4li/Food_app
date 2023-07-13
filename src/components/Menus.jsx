@@ -14,7 +14,7 @@ function Menus() {
         <AppProvider>
             <Header />
             <Routes>
-                    //Homepage
+                    {/* Homepage */}
                 <Route exact path="/"
                     element={
                         <>
@@ -26,7 +26,7 @@ function Menus() {
                         </>
                     } />
 
-                //checkout page
+                {/* checkout page */}
                 <Route path="checkout" element={<Checkout />} />
             </Routes>
             <Footer/>

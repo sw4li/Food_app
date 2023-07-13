@@ -447,9 +447,11 @@ img {
       margin-bottom: 6px;
       border-bottom: 1px solid #000;
       position: relative;
+      overflow-x: hidden;
 
       h6 {
         margin-bottom: 8px;
+        font-size: 14px;
       }
 
       .closeIcon {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { StateContext,DispatchContext } from '../context/AppProvider';
@@ -13,7 +13,7 @@ const AddToCart = () => {
         return (
             <div className='item-container'>
                 <FontAwesomeIcon className='closeIcon' icon={faCircleXmark} onClick={()=>{dispatch({type:'remove_cart',payload:{name:item.name}})}} />
-                <img src={item.image} alt="product image" />
+                <img src={item.image} alt="product_image" />
                 <h6>{item.name}</h6>
            
             </div>

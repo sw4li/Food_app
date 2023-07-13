@@ -53,8 +53,8 @@ function Category(props) {
     let [activeCategory, setactiveCategory] = useState("Beef")
     let menuDishes;
     let [currentPage, setcurrentPage] = useState(1);
-    let [itemsPerPage, setitemsPerPage] = useState(4);
-
+    // let [itemsPerPage, setitemsPerPage] = useState(4);
+const itemsPerPage=4;
     let indexOfLastDish = currentPage * itemsPerPage;
     let indexOfFirstDish = indexOfLastDish - itemsPerPage;
 
@@ -100,7 +100,7 @@ function Category(props) {
                 </div>
                 <div className="Category-dishes-show">
                     <ul className="flex flex-wrap gap-30">
-                        {filtered.length != 0 ? showSliced :
+                        {filtered.length !== 0 ? showSliced :
                             <div className="alert">
                                 <h3>Dishes are currently unavailable!</h3>
                                 <h4>Please choose another one.</h4>

@@ -21,17 +21,23 @@ function SpecialDishes() {
   }
 
   let specialDishes = allMenus.map((items, index) => {
+ 
     if (index < 8) {
       return (
         // card is also reused in Category.jsx
+        
         <Card
           item={items}
           showPopupHandler={showPopupHandler}
         />
       )
     }
+    else{
+      return null;
+    }
   }
   )
+  console.log(specialDishes);
 
   return (
     <section className="special-dishes">

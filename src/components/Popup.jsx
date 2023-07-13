@@ -18,7 +18,7 @@ const dispatch = useContext(DispatchContext)
         <div className='flex'>
           <div className='popup-content-data'>
             <div className="popup-image">
-              <img src={item.strMealThumb}></img>
+              <img src={item.strMealThumb} alt='product'></img>
               <h4>MRP: 250 Rs.</h4>
             </div>
 

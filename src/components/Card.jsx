@@ -4,7 +4,8 @@ function Card(props) {
 
     return (
         <li>
-            <a href="javascript:;" onClick={() => {
+            <a href="/#" onClick={(e) => {
+                 e.preventDefault()
                 props.showPopupHandler(props.item.strMeal)
             }}>
                 <img src={props.item.strMealThumb} alt="" />
