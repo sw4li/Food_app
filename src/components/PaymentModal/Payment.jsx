@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment} from 'react'
 
-export default function Payment({ isOpen, setIsOpen,cartItem }) {
+export default function Payment({ isOpen, setIsOpen }) {
 
     function closeModal() {
         setIsOpen(false)

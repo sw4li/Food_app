@@ -5,10 +5,11 @@ const DispatchContext = createContext();
 const StateContext = createContext();
 
 const AppProvider = (props) => {
-// if cart has values
+
 let cartFromLocal =JSON.parse(localStorage.getItem('cartItems'));
     // initial state
     const initialState = { cartItems: cartFromLocal?.cartItems ? [...cartFromLocal.cartItems] : [] }
+
     const reducer = (state, action) => {
         switch (action.type) {
             case 'add_to_cart':

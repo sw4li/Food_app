@@ -8,7 +8,9 @@ const Checkout = () => {
   let cartItem = cartFromLocal.cartItems.map((item) => {
     return (
       <div className="checkout-container-item flex">
+        <div className='img-container'>
         <img src={item.image} alt="product" />
+        </div>
         <h4>{item.name}</h4>
         <h4>1</h4>
       </div>
@@ -23,7 +25,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Payment isOpen={isOpen} setIsOpen={setIsOpen} cartItem={cartItem} />
+      <Payment isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className='checkout'>
         <div className='checkout-container flex'>
           <div className='checkout-container-items'>

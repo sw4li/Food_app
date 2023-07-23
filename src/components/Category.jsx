@@ -52,9 +52,10 @@ function Category(props) {
     let [filtered, setFiltered] = useState(beefCategory)
     let [activeCategory, setactiveCategory] = useState("Beef")
     let menuDishes;
+
+    // custom pagination data
     let [currentPage, setcurrentPage] = useState(1);
-    // let [itemsPerPage, setitemsPerPage] = useState(4);
-const itemsPerPage=4;
+    const itemsPerPage=4;
     let indexOfLastDish = currentPage * itemsPerPage;
     let indexOfFirstDish = indexOfLastDish - itemsPerPage;
 
@@ -83,7 +84,7 @@ const itemsPerPage=4;
     })
 
     return (
-        <div className="Category-dishes">
+        <section className="Category-dishes">
             {showPopup && <Popup
                 closeBtn={closePopupHandler}
                 currentDish={currentDish}
@@ -115,7 +116,7 @@ const itemsPerPage=4;
                 />
 
             </div>
-        </div>
+        </section>
     )
 }
 
