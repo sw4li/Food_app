@@ -6,5 +6,4 @@ Live Demo:https://fudi-foodapp.netlify.app
 * Payment gateway(Razorpay) integrated(test-mode).
 * Guest mode(no user details fetched).
 * Demo price details and quantity in checkout.
-
-         ! Responsiveness limited !
+* responsive web application.
